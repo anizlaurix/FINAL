@@ -61,7 +61,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		      $.ajax({
 		          type:"POST",
               /*url:"guardar.php",*/
-		          url:"http://charlyxaar.esy.es/r/guardar.php",
+		          url:"http://anizlaurix.esy.es/examen/guardar.php",
 		          data:"nombre="+nom+"&dir="+dir+"&Rfc="+rfc+"&tel="+tel+"&classif="+clasif+"&lat="+lat+"&long="+lon,
 		          success: guardandoServicios
 		      });
@@ -88,7 +88,7 @@ function uploadPhoto(foto) {
 
 	var ft = new FileTransfer();
 	/*ft.upload(foto,"subirArchivo.php",function(r){*/
-    ft.upload(foto,"http://charlyxaar.esy.es/subirArchivo.php",function(r){
+    ft.upload(foto,"http://anizlaurix.esy.es/examen/subirArchivo.php",function(r){
 		navigator.notification.confirm("El archivo: "+r.response,null, "Notificacion");
 	}, function(err){
 		navigator.notification.alert("Error: "+err.code+" detalle: "+err.response,null, "Error de Envío");
@@ -100,7 +100,7 @@ $("#btnConsultaAct").tap(function (){
   $.ajax({
     type:"POST",
     /*url:"consultaTodo.php",*/
-      url:"http://charlyxaar.esy.es/r/consultaTodo.php",
+      url:"http://anizlaurix.esy.es/examen/consultaTodo.php",
     data:"",
     success: function(datos){
       var reg=$.parseJSON(datos);
@@ -120,7 +120,7 @@ $("#btnCargDatos").tap(function (){
   $.ajax({
     type:"POST",
     /*url:"consultaId.php",*/
-    url:"http://charlyxaar.esy.es/r/consultaId.php",
+    url:"http://anizlaurix.esy.es/examen/consultaId.php",
     data:"id="+id,
     success: function(datos){
       var resp=$.parseJSON(datos);
@@ -156,7 +156,7 @@ $("#btnActId").tap(function (){
       $.ajax({
         type:"POST",
         /*url:"guardarAct.php",*/
-    url:"http://charlyxaar.esy.es/r/guardarAct.php",
+    url:"http://anizlaurix.esy.es/examen/guardarAct.php",
         data:"id="+id+"&nombre="+nom+"&dir="+dir+"&Rfc="+rfc+"&tel="+tel+"&classif="+cla+"&lat="+lat+"&long="+lon+"&fot="+fot,
         success: exeGuardarAct
       });
@@ -173,7 +173,7 @@ $("#btnConsultaE").tap(function (){
   $.ajax({
     type:"POST",
     /*url:"consultaTodo.php",*/
-    url:"http://charlyxaar.esy.es/r/consultaTodo.php",
+    url:"http://anizlaurix.esy.es/examen/consultaTodo.php",
     data:"",
     success: function(datos){
       var reg=$.parseJSON(datos);
@@ -194,7 +194,7 @@ $("#btnConsultaE").tap(function (){
 			$.ajax({
 				type:"POST",
 				/*url:"eliminar.php",*/
-        url:"http://charlyxaar.esy.es/r/eliminar.php",
+        url:"http://anizlaurix.esy.es/examen/eliminar.php",
 				data:"id="+id,
 				success: function(datos){
 					alert("Respuesta:"+datos);
@@ -236,7 +236,7 @@ function obtenerMarcas(){
 	      $.ajax({
 		        type:"POST",
 		        /*url:"consultar.php",*/
-            url:"http://charlyxaar.esy.es/r/consultar.php",
+            url:"http://anizlaurix.esy.es/examen/consultar.php",
 		        data:"",
 		        success: serviciosConsultados
 	      });
