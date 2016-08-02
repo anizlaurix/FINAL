@@ -88,7 +88,7 @@ function uploadPhoto(foto) {
 
 	var ft = new FileTransfer();
 	/*ft.upload(foto,"subirArchivo.php",function(r){*/
-    ft.upload(foto,"http://anizlaurix.esy.es/examen/subirArchivo.php",function(r){
+    ft.upload(foto,"http://anizlaurix.esy.es/subirArchivo.php",function(r){
 		navigator.notification.confirm("El archivo: "+r.response,null, "Notificacion");
 	}, function(err){
 		navigator.notification.alert("Error: "+err.code+" detalle: "+err.response,null, "Error de Envío");
@@ -397,7 +397,7 @@ text-align:center;
       </div>
       <div data-role="content" >
 	       <p>Desarrolldo por: </p>
-         <p>Ing. Carlos Alfredo Morales Perez </p>
+         <p>Ing. Ana Laura Mora Gonzalez </p>
          <p>Materia: </p>
          <p>Base de Datos para Dispositivos Móviles </p>
          <p>Semestre: </p>
